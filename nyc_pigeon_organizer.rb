@@ -1,16 +1,19 @@
 def nyc_pigeon_organizer(data)
   list = {}
-  data.each do |pigeon_cat, values|
-    values.each do |data, array|
-      if list.has_key?(name)
-        list[name] = {pigeon_cat => [data.to_s]}
-      end
-      if list[name].has_key?(pigeon_cat)
-        list[name][pigeon_cat] << describe.to_s
+  data.each do |key, value|
+  value.each do |describe, array|
+    array.each do |name|
+      if pigeon_list.has_key?(name)
+        if pigeon_list[name].has_key?(key)
+          pigeon_list[name][key] << describe.to_s
+        else
+          pigeon_list[name][key] = [describe.to_s]
+        end
       else
-        list[name][pigeon_cat] = [data.to_s]
+        pigeon_list[name] = {key => [describe.to_s]}
       end
     end
   end
-  pigeon_list
+end
+pigeon_list
 end
