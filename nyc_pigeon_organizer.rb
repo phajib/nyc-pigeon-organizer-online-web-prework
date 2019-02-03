@@ -10,7 +10,7 @@ def nyc_pigeon_organizer(data)
           list[name][pigeon_data] = [data.to_s]
         end
       else
-        list[name] = {pigeon_data: [data.to_s]}
+        list[name] = {pigeon_data => [data.to_s]}
       end
     end
   end
