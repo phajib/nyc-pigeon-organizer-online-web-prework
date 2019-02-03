@@ -4,7 +4,7 @@ def nyc_pigeon_organizer(data)
   value.each do |data, array|
     array.each do |name|
       if list.include?(name)
-        if list[name].has_key?(pigeon_data)
+        if list[name].include?(pigeon_data)
           list[name][pigeon_data] << data.to_s
         else
           list[name][pigeon_data] = [data.to_s]
