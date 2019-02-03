@@ -5,11 +5,10 @@ def nyc_pigeon_organizer(data)
       if list.has_key?(name)
         list[name] = {pigeon_cat => [data.to_s]}
       end
-        if list[name].has_key?(pigeon_cat)
-          list[name][pigeon_cat] << describe.to_s
-        else
-          list[name][pigeon_cat] = [data.to_s]
-        end
+      if list[name].has_key?(pigeon_cat)
+        list[name][pigeon_cat] << describe.to_s
+      else
+        list[name][pigeon_cat] = [data.to_s]
       end
     end
   end
